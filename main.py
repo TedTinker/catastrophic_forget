@@ -1,9 +1,6 @@
 import os
 from torchinfo import summary
 
-file = r"C:\Users\tedjt\Desktop\Thinkster\87 catastrophic forget\code"
-os.chdir(file)
-
 from get_data import train_groups, test_groups, x_shape
 from show_images import show_image
 from model import classifier
