@@ -19,19 +19,6 @@ def init_weights(m):
     except:
         pass
 
-class one_lin(nn.Module):
-    def __init__(self, quantity, output):
-        super().__init__()
-        
-        self.lin = nn.Sequential(
-            nn.Linear(quantity, output),
-            nn.LeakyReLU(),
-            nn.Dropout(.2)
-            )
-        
-    def forward(self, x):
-        return(self.lin(x))
-
 class one_cnn(nn.Module):
     def __init__(self, in_channels, out_channels, pool):
         super().__init__()
